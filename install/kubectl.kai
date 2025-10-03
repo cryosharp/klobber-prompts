@@ -99,5 +99,13 @@ Source environment file: `/opt/cryosharp/klobber/etc/environment`
 
 - List all namespaces.
 
+<go/>
+
+# Ownership
+
+Target directory: `/opt/cryosharp/klobber`
+
+- Change the ownership recursively to $USER.
+
 </promptText>
 </klobber>

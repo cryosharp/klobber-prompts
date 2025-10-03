@@ -66,5 +66,13 @@ Source environment file: `/opt/cryosharp/klobber/etc/environment`
 - Recreate the directory: `/opt/cryosharp/klobber/git/`.
 - Clone: `git@github.com:cryosharp/klobber-prompts.git` into `/opt/cryosharp/klobber/git/`.
 
+<go/>
+
+# Ownership
+
+Target directory: `/opt/cryosharp/klobber`
+
+- Change the ownership recursively to $USER.
+
 </promptText>
 </klobber>
