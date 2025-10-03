@@ -95,7 +95,7 @@ export KUBECONFIG='/opt/cryosharp/klobber/.kube/config'
 
 # Test kubectl connectivity
 
-Source the environment file: `/opt/cryosharp/klobber/etc/environment`
+Source environment file: `/opt/cryosharp/klobber/etc/environment`
 
 - List all namespaces.
 
