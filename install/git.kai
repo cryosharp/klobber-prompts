@@ -50,7 +50,7 @@ exec ssh -i /opt/cryosharp/klobber/.ssh/.git-private-key -o StrictHostKeyCheckin
 Append to environment file: `/opt/cryosharp/klobber/etc/environment`
 
 ```
-export GIT_SSH='/opt/cryosharp/klobber/bin/git-ssh.h'
+export GIT_SSH='/opt/cryosharp/klobber/bin/git-ssh.sh'
 ```
 
 - Ensure the directory exists.
