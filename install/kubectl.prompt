@@ -1,0 +1,103 @@
+<klobber>
+<promptMeta>
+{
+  "useAgentMode": true,
+  "agentTaskToken": "<go/>",
+  "useCompression": true,
+  "useSystemMessages": true,
+  "maxLoopLeakIterations": 5,
+  "maxPromptIterations": 50,
+  "maxPhraseRepetition": 70
+}
+</promptMeta>
+<promptText>
+
+# Install kubectl
+
+Download the kubectl binary using the script below:
+
+```
+curl -L -o /opt/cryosharp/klobber/bin/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
+- Ensure the directory exists.
+- Protect it for the current user.
+- Make it executable.
+- Create a symbolic link in /usr/bin.
+
+<go/>
+
+# Install Kubernetes CA certificate
+
+Write the certificate below to file: `/opt/cryosharp/klobber/certs/ca.crt`
+
+```
+{{SECRET_KUBERNETES_CA_CERTIFICATE}}
+```
+
+- Ensure the directory exists.
+- Protect it for the current user.
+
+<go/>
+
+# Install Kubernetes client certificate
+
+Write the certificate below to file: `/opt/cryosharp/klobber/certs/client.crt`
+
+```
+{{SECRET_KUBERNETES_CLIENT_CERTIFICATE}}
+```
+
+- Ensure the directory exists.
+- Protect it for the current user.
+
+<go/>
+
+# Install Kubernetes client key
+
+Write the certificate below to file: `/opt/cryosharp/klobber/certs/client.key`
+
+```
+{{SECRET_KUBERNETES_CLIENT_KEY}}
+```
+
+- Ensure the directory exists.
+- Protect it for the current user.
+
+<go/>
+
+# Install Kubernetes config
+
+Write the config below to file: `/opt/cryosharp/klobber/.kube/config`
+
+```
+{{SECRET_KUBERNETES_CONFIG}}
+```
+
+- Ensure the directory exists.
+- Protect it for the current user.
+
+<go/>
+
+# Install kubectl environment
+
+Append to environment file: `/opt/cryosharp/klobber/etc/environment`
+
+```
+export KUBECONFIG='/opt/cryosharp/klobber/.kube/config'
+```
+
+- Ensure the directory exists.
+- Ensure there are no duplicates.
+- Protect it for the current user.
+
+<go/>
+
+# Test kubectl connectivity
+
+Source the environment file: `/opt/cryosharp/klobber/etc/environment`
+
+- List all namespaces.
+
+</promptText>
+</klobber>
