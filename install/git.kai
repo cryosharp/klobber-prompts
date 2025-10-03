@@ -63,7 +63,7 @@ export GIT_SSH='/opt/cryosharp/klobber/bin/git-ssh.h'
 
 Source environment file: `/opt/cryosharp/klobber/etc/environment`
 
-- Ensure directory exists: `/opt/cryosharp/klobber/git/`.
+- Recreate the directory: `/opt/cryosharp/klobber/git/`.
 - Clone: `git@github.com:cryosharp/klobber-prompts.git` into `/opt/cryosharp/klobber/git/`.
 
 </promptText>
