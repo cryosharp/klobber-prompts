@@ -5,7 +5,7 @@
   "agentTaskToken": "<go/>",
   "useCompression": true,
   "useSystemMessages": true,
-  "maxLoopLeakIterations": 5,
+  "maxLoopLeakIterations": 3,
   "maxPromptIterations": 50,
   "maxPhraseRepetition": 70
 }
